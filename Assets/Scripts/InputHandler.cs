@@ -13,10 +13,28 @@ namespace ZYT
 
         // 配置 input systems 时自动生成的类
         PlayerControls inputActions;
+        // 控制相机移动旋转
+        CameraHandler cameraHandler;
 
         // 用于表示 2D 向量和点。
         Vector2 movementInput;
         Vector2 cameraInput;
+
+        private void Awake()
+        {
+            cameraHandler = CameraHandler.singleton;
+        }
+
+        private void FixedUpdate()
+        {
+            float delta = Time.fixedDeltaTime;
+
+            if (cameraHandler != null)
+            {
+                cameraHandler.FollowTarget(delta);
+                cameraHandler.HandleCameraRotation(delta, mouseX, mouseY);
+            }
+        }
 
         // 关于 unity 事件函数的执行顺序
         // https://docs.unity3d.com/cn/current/Manual/ExecutionOrder.html
