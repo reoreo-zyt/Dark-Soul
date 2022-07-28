@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTransform: {fileID: 0}
-  animationHandler: {fileID: 0}
+  animatorHandler: {fileID: 0}
   rigidbody: {fileID: 204720261}
   normalCamera: {fileID: 963194225}
   movementSpeed: 5
@@ -277,7 +277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb69c760b6c57ab42885bae003da31a5, type: 2}
+  - {fileID: 2100000, guid: 3aecfcaa72ea0d0469fadac268305416, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -555,6 +555,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1995506796041576762, guid: 18fd62fcdd003e54789f9d211fd549b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5785476
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995506796041576762, guid: 18fd62fcdd003e54789f9d211fd549b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.35251343
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 18fd62fcdd003e54789f9d211fd549b3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3f46fd1e3b001bd45bc025de824e2535, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 18fd62fcdd003e54789f9d211fd549b3, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18fd62fcdd003e54789f9d211fd549b3, type: 3}
 --- !u!4 &1328366736 stripped
@@ -579,5 +595,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2393b79a84b436d47b62bf0daa0cefe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 1328366741}
   canRotate: 1
+--- !u!95 &1328366741 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 18fd62fcdd003e54789f9d211fd549b3, type: 3}
+  m_PrefabInstance: {fileID: 1328366735}
+  m_PrefabAsset: {fileID: 0}
